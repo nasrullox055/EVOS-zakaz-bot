@@ -18,11 +18,11 @@
 
     $option = array( 
         //First row
-        array($telegram->buildKeyboardButton("🍴 Меню"))
+        array($telegram->buildKeyBoardButton("🍴 Меню")),
         //Second row 
-        array($telegram->buildKeyboardButton("🛍 Мои заказы"))
+        array($telegram->buildKeyBoardButton("🛍 Мои заказы")),
         //Third row
-        array($telegram->buildKeyboardButton("✍️ Оставить отзыв"), $telegram->buildKeyboardButton("⚙️ Настройки")) );
+        array($telegram->buildKeyBoardButton("✍️ Оставить отзыв"), $telegram->buildKeyBoardButton("⚙️ Настройки")) );
 
                 $keyb = $telegram->buildKeyBoard($option, $onetime=false, $resize=true);
                 $content = array('chat_id' => $chat_id, 'reply_markup' => $keyb, 'text' => "Выберите одно из следующих");
@@ -42,9 +42,9 @@
 
     $option = array( 
         //First row
-        array($telegram->buildKeyboardButton("🗺 мои адреса"))
+        array($telegram->buildKeyBoardButton("🗺 мои адреса")),
         //Second row 
-        array($telegram->buildKeyboardButton("📍 Отправить геолокацию", $request_location=true), $telegram->buildKeyboardButton("⬅️ Назад")) );
+        array($telegram->buildKeyBoardButton("📍 Отправить геолокацию", $request_location=true), $telegram->buildKeyBoardButton("⬅️ Назад")) );
 
                 $keyb = $telegram->buildKeyBoard($option, $onetime=false, $resize=true);
                 $content = array('chat_id' => $chat_id, 'reply_markup' => $keyb, 'text' => "Отправьте 📍 геолокацию или выберите адрес доставки");
@@ -55,11 +55,11 @@ elseif($text == "🛍 Мои заказы")
 {
     $option = array( 
         //First row
-        array($telegram->buildKeyboardButton("🍴 Меню"))
+        array($telegram->buildKeyBoardButton("🍴 Меню")),
         //Second row 
-        array($telegram->buildKeyboardButton("🛍 Мои заказы"))
+        array($telegram->buildKeyBoardButton("🛍 Мои заказы")),
         //Third row
-        array($telegram->buildKeyboardButton("✍️ Оставить отзыв"), $telegram->buildKeyboardButton("⚙️ Настройки")) );
+        array($telegram->buildKeyBoardButton("✍️ Оставить отзыв"), $telegram->buildKeyBoardButton("⚙️ Настройки")) );
 
                 $keyb = $telegram->buildKeyBoard($option, $onetime=false, $resize=true);
                 $content = array('chat_id' => $chat_id, 'reply_markup' => $keyb, 'text' => "Вы совсем ничего не заказали.");
@@ -70,9 +70,9 @@ elseif($text == "✍️ Оставить отзыв")
 {
     $option = array(
         //First row
-        array($telegram->buildKeyboardButton("📞 Мой номер", $request_contact=true));
+        array($telegram->buildKeyBoardButton("📞 Мой номер", $request_contact=true)),
         //Second row
-        array($telegram->buildKeyboardButton("⬅️ Назад"));
+        array($telegram->buildKeyBoardButton("⬅️ Назад"))
     );
 
     $keyb = $telegram->buildKeyBoard($option, $onetime=false, $resize=true);
@@ -84,8 +84,8 @@ elseif($text == "✍️ Оставить отзыв")
 elseif($text == "⚙️ Настройки")
 {
     $option = array(
-        array($telegram->buildKeyboardButton("Изменить язык"));
-        array($telegram->buildKeyboardButton("⬅️ Назад"));
+        array($telegram->buildKeyBoardButton("Изменить язык")),
+        array($telegram->buildKeyBoardButton("⬅️ Назад"))
     );
 
     $keyb = $telegram->buildKeyBoard($option, $onetime=false, $resize=true);
@@ -96,8 +96,8 @@ elseif($text == "⚙️ Настройки")
 elseif($text == "Изменить язык")
 {
     $option = array(
-        array($telegram->buildKeyboardButton("🇷🇺 Русский"), $telegram->buildKeyboardButton("🇺🇿 O'zbekcha"));
-        array($telegram->buildKeyboardButton("⬅️ Назад"));
+        array($telegram->buildKeyBoardButton("🇷🇺 Русский"), $telegram->buildKeyBoardButton("🇺🇿 O'zbekcha")),
+        array($telegram->buildKeyBoardButton("⬅️ Назад"))
     );
 
     $keyb = $telegram->buildKeyBoard($option, $onetime=false, $resize=true);
@@ -108,8 +108,8 @@ elseif($text == "Изменить язык")
 elseif($text == "🇺🇿 O'zbekcha")
 {
     $option = array(
-        array($telegram->buildKeyboardButton("Tilni o'zgartirish"));
-        array($telegram->buildKeyboardButton("⬅️ Ortga"));
+        array($telegram->buildKeyBoardButton("Tilni o'zgartirish")),
+        array($telegram->buildKeyBoardButton("⬅️ Ortga"))
     );
 
     $keyb = $telegram->buildKeyBoard($option, $onetime=false, $resize=true);
@@ -120,8 +120,8 @@ elseif($text == "🇺🇿 O'zbekcha")
 elseif($text == "🇷🇺 Русский")
 {
     $option = array(
-        array($telegram->buildKeyboardButton("Изменить язык"));
-        array($telegram->buildKeyboardButton("⬅️ Назад"));
+        array($telegram->buildKeyBoardButton("Изменить язык")),
+        array($telegram->buildKeyBoardButton("⬅️ Назад"))
     );
 
     $keyb = $telegram->buildKeyBoard($option, $onetime=false, $resize=true);
@@ -135,11 +135,11 @@ elseif($text == "⬅️ Ortga")
 {
     $option = array( 
         //First row
-        array($telegram->buildKeyboardButton("🍴 Menyu"))
+        array($telegram->buildKeyBoardButton("🍴 Menyu")),
         //Second row 
-        array($telegram->buildKeyboardButton("🛍 Mening buyurtmalarim"))
+        array($telegram->buildKeyBoardButton("🛍 Mening buyurtmalarim")),
         //Third row
-        array($telegram->buildKeyboardButton("✍️ Fikr bildirish"), $telegram->buildKeyboardButton("⚙️ Sozlamalar")) );
+        array($telegram->buildKeyBoardButton("✍️ Fikr bildirish"), $telegram->buildKeyBoardButton("⚙️ Sozlamalar")) );
 
                 $keyb = $telegram->buildKeyBoard($option, $onetime=false, $resize=true);
                 $content = array('chat_id' => $chat_id, 'reply_markup' => $keyb, 'text' => "Quyidagilardan birini tanlang");
@@ -159,9 +159,9 @@ elseif($text == "🍴 Menyu")
 
     $option = array( 
         //First row
-        array($telegram->buildKeyboardButton("🗺 Mening manzillarim"))
+        array($telegram->buildKeyBoardButton("🗺 Mening manzillarim")),
         //Second row 
-        array($telegram->buildKeyboardButton("📍 Geolokatsiyani yuboring", $request_location=true), $telegram->buildKeyboardButton("⬅️ ortga")) );
+        array($telegram->buildKeyBoardButton("📍 Geolokatsiyani yuboring", $request_location=true), $telegram->buildKeyBoardButton("⬅️ ortga")) );
 
                 $keyb = $telegram->buildKeyBoard($option, $onetime=false, $resize=true);
                 $content = array('chat_id' => $chat_id, 'reply_markup' => $keyb, 'text' => "📍 Geolokatsiyani yuboring yoki yetkazib berish manzilini tanlang");
@@ -172,11 +172,11 @@ elseif($text == "🛍 Mening buyurtmalarim")
 {
     $option = array( 
         //First row
-        array($telegram->buildKeyboardButton("🍴 Menyu"))
+        array($telegram->buildKeyBoardButton("🍴 Menyu")),
         //Second row 
-        array($telegram->buildKeyboardButton("🛍 Mening buyurtmalarim"))
+        array($telegram->buildKeyBoardButton("🛍 Mening buyurtmalarim")),
         //Third row
-        array($telegram->buildKeyboardButton("✍️ Fikr bildirish"), $telegram->buildKeyboardButton("⚙️ Sozlamalar")) );
+        array($telegram->buildKeyBoardButton("✍️ Fikr bildirish"), $telegram->buildKeyBoardButton("⚙️ Sozlamalar")) );
 
                 $keyb = $telegram->buildKeyBoard($option, $onetime=false, $resize=true);
                 $content = array('chat_id' => $chat_id, 'reply_markup' => $keyb, 'text' => "Siz hech narsa buyurtma bermagansiz");
@@ -187,9 +187,9 @@ elseif($text == "✍️ Fikr bildirish")
 {
     $option = array(
         //First row
-        array($telegram->buildKeyboardButton("📞 Mening raqamim", $request_contact=true));
+        array($telegram->buildKeyBoardButton("📞 Mening raqamim", $request_contact=true)),
         //Second row
-        array($telegram->buildKeyboardButton("⬅️ Ortga"));
+        array($telegram->buildKeyBoardButton("⬅️ Ortga"))
     );
 
     $keyb = $telegram->buildKeyBoard($option, $onetime=false, $resize=true);
@@ -201,7 +201,7 @@ elseif($text == "✍️ Fikr bildirish")
 elseif($text == $request_contact)
 {
     $option = array(
-        array($telegram->buildKeyboardButton("⬅️ Ortga"));
+        array($telegram->buildKeyBoardButton("⬅️ Ortga"))
     );
 
     $keyb = $telegram->buildKeyBoard($option, $onetime=false, $resize=true);
@@ -212,20 +212,20 @@ elseif($text == $request_contact)
 elseif($text == "⚙️ Sozlamalar")
 {
     $option = array(
-        array($telegram->buildKeyboardButton("Tilni o'zgartirish"));
-        array($telegram->buildKeyboardButton("⬅️ Ortga"));
+        array($telegram->buildKeyBoardButton("Tilni o'zgartirish")),
+        array($telegram->buildKeyBoardButton("⬅️ Ortga"))
     );
 
     $keyb = $telegram->buildKeyBoard($option, $onetime=false, $resize=true);
-    $content = array('chat_id' => $chat_id, 'reply_markup' => $keyb, 'text' => "Harakat tanlang:");
+    $content = array('chat_id' => $chat_id, 'reply_markup' => $keyb, 'text' => "Harakatni tanlang:");
     $telegram->sendMessage($content);
 }
 
 elseif($text == "Tilni o'zgartirish")
 {
     $option = array(
-        array($telegram->buildKeyboardButton("🇷🇺 Русский"), $telegram->buildKeyboardButton("🇺🇿 O'zbekcha"));
-        array($telegram->buildKeyboardButton("⬅️ Ortga"));
+        array($telegram->buildKeyBoardButton("🇷🇺 Русский"), $telegram->buildKeyBoardButton("🇺🇿 O'zbekcha")),
+        array($telegram->buildKeyBoardButton("⬅️ Ortga"))
     );
 
     $keyb = $telegram->buildKeyBoard($option, $onetime=false, $resize=true);
